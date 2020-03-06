@@ -50,7 +50,7 @@ You are required to submit the following for review:
 - - - - - - - - - 
 Personal commit log
 # password-generator
-// created develop brancn
+// created develop branch
 // copy over files from GT repo, index.html, script.js, style.cs
 // added prompts and confirms, tested with alerts
 // added if/else statements with alerts to check confirms
