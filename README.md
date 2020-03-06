@@ -55,3 +55,4 @@ Personal commit log
 // added prompts and confirms, tested with alerts
 // added if/else statements with alerts to check confirms
 // console.log for confirms to see in console
+// added additional gherkins to create a more precise result
