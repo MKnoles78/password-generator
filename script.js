@@ -7,24 +7,31 @@
 
 var generateBtn = document.querySelector("#generate");
 
+
+
+
 // Write password to the #password input
 function generatePassword () {
   // WHEN prompted for password criteria
   // THEN I select which criteria to include in the password
   // WHEN prompted for the length of the password
   // THEN I choose a length of at least 8 characters and no more than 128 characters
+  
   var characterLength = prompt ("Choose a password length between 8 and 128 characters?");
   alert("you would like " + characterLength + " characters.");
 
   // WHEN prompted for character types to include in the password
   // THEN I choose lowercase, uppercase, numeric, and/or special characters
-
+  var alphaList = ["A","B","C","D"]
   var confirmLower = confirm ("Would you like lowercase letters?");
+  
   // alert("you would like " + confirmLower);
   // WHEN I answer each prompt
   // THEN my input should be validated and at least one character type should be selected
   if (confirmLower) {
-    alert("lowers it is")
+    // return lowerList[3];
+    // alert("lowers it is")
+    return alphaList[2];
   }else {
     alert("no lowers for you")
   };
@@ -59,6 +66,9 @@ function generatePassword () {
     alert("no specials for you")
   }
   
+  
+  
+
   console.log("generating password");
   console.log(confirmNums, confirmUpper, confirmLower, confirmSpecial)
 

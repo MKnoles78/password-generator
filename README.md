@@ -56,3 +56,4 @@ Personal commit log
 // added if/else statements with alerts to check confirms
 // console.log for confirms to see in console
 // added additional gherkins to create a more precise result
+// worked on trying to have it where confirms return values
