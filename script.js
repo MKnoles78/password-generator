@@ -3,8 +3,8 @@
 var alphaLower = "abcdefghijklmnopqrstuvwxyz";
 var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "1234567890";
-var symbols = "!@#$%^&*()";
-var confirmLength = userInput;
+var symbol = "!@#$%^&*()";
+var confirmLength;
 
 var generateBtn = document.querySelector("#generate");
 
@@ -15,7 +15,14 @@ function generatePassword () {                                                  
 
 }
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(
+    confirmLength,
+    userLower,
+    userUpper,
+    userNumber,
+    userSymbol
+
+  );
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -27,29 +34,71 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-
-
-var userInput = prompt ("Choose a password length between 8 and 128 characters?");
+var confirmLength = prompt ("Choose a password length between 8 and 128 characters?");
+if (confirmLength >= 8) {
+  alert ("good job")
+}else {
+  alert ("Please refresh and reinput between 8 and 128")
+}
+ 
+// console.log(confirmLength)
 var userLower = confirm ("Would you like lowercase letters?");
-var userUpper = confirm ("Would you like uppercase letters?");
-var userNumber = confirm ("Would you like numbers?");
-var userSymbols = confirm ("Would you like spedial characters? (ex. !@#$)");
+if (userLower) { 
 
-console.log(userInput,userLower,userUpper,userNumber,userSymbols)
-console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
+  
+}else {
+  
+
+};
+// console.log(userLower)
+
+var userUpper = confirm ("Would you like uppercase letters?");
+if (userUpper) {
+    
+}else {
+
+};
+// console.log(userUpper)
+
+var userNumber = confirm ("Would you like numbers?");
+if (userNumber) {
+    
+}else {
+
+};
+// console.log(userNumber)
+
+var userSymbol = confirm ("Would you like spedial characters? (ex. !@#$)");
+if (userSymbol) {
+    
+}else {
+
+};
+// console.log(userSymbol)
+
+// logs the array of length and with true and false statements
+var userInputs = [confirmLength, userLower, userUpper, userNumber, userSymbol]
+console.log(userInputs)
+
+// logs userInput
+// console.log(confirmLength);
+// logs true and false statements
+// console.log(userLower,userUpper,userNumber,userSymbol);
+
+// console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
 
 // function confirmLength (){
 
 // };
 
-
-// function randomLowers (){
+// tested both scenarios with index and with string
+// function randomLower (){
   // var alphaLower = "abcdefghijklmnopqrstuvwxyz";
   // return alphaLower[Math.floor(Math.random() * alphaLower.length)];
   // return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-
+  
 // };
+
 
 // function randomUppers (){
   // var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -65,9 +114,8 @@ console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
 
 // };
 
-// function randomSymbols(){
-  // var symbols = "!@#$%^&*()";
-  // return symbols[Math.floor(Math.random() * symbols.length)];
-
+// function randomSymbol(){
+  // var symbol = "!@#$%^&*()";
+  // return symbol[Math.floor(Math.random() * symbol.length)];
 
 // };
