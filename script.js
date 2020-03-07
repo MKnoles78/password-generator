@@ -42,43 +42,98 @@ if (confirmLength >= 8) {
 }
  
 // console.log(confirmLength)
+
 var userLower = confirm ("Would you like lowercase letters?");
 if (userLower) { 
+  randomLower ()
 
-  
 }else {
   
-
 };
+// tested both scenarios with index and with string
+function randomLower (l){
+  var alphaLower = "abcdefghijklmnopqrstuvwxyz";
+  var text = ""; 
+  for(var i=0; i < l; i++ )
+  {  
+  text += alphaLower.charAt(Math.floor(Math.random() * alphaLower.length));
+  }
+  return text;
+  };
+  console.log(randomLower(confirmLength))
+  
+  // return alphaLower[Math.floor(Math.random() * alphaLower.length) + 1];
+  // return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  
+
 // console.log(userLower)
+// console.log(randomLower)
 
 var userUpper = confirm ("Would you like uppercase letters?");
 if (userUpper) {
-    
+    randomUpper ()
 }else {
 
 };
-// console.log(userUpper)
+function randomUpper (l){
+  var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var text = ""; 
+  for(var i=0; i < l; i++ )
+  {  
+  text += alphaUpper.charAt(Math.floor(Math.random() * alphaUpper.length));
+  }
+  return text;
+  };
+  console.log(randomUpper(confirmLength))
+  // return String.fromCharCode(Math.floor(Math.Random() * 26) + 65);
+  // console.log(userUpper)
 
-var userNumber = confirm ("Would you like numbers?");
+
+
+  var userNumber = confirm ("Would you like numbers?");
 if (userNumber) {
+  randomNumber ()
     
 }else {
 
 };
-// console.log(userNumber)
+function randomNumber (l){
+  var numeric = "1234567890";
+  var text = ""; 
+  for(var i=0; i < l; i++ )
+  {  
+  text += numeric.charAt(Math.floor(Math.random() * numeric.length));
+  }
+  return text;
+  };
+  console.log(randomNumber(confirmLength))
+  // return String.fromCharCode(Math.floor(Math.Random() * 10) + 48);
+  // console.log(userNumber)
 
 var userSymbol = confirm ("Would you like spedial characters? (ex. !@#$)");
 if (userSymbol) {
-    
+    randomSymbol ()
 }else {
 
 };
+function randomSymbol(l){
+  var symbol = "!@#$%^&*()";
+  var text = ""; 
+  for(var i=0; i < l; i++ )
+  {  
+  text += symbol.charAt(Math.floor(Math.random() * symbol.length));
+  }
+  return text;
+  };
+  console.log(randomSymbol(confirmLength))
+
+
+
 // console.log(userSymbol)
 
 // logs the array of length and with true and false statements
 var userInputs = [confirmLength, userLower, userUpper, userNumber, userSymbol]
-console.log(userInputs)
+// console.log(userInputs)
 
 // logs userInput
 // console.log(confirmLength);
@@ -87,35 +142,5 @@ console.log(userInputs)
 
 // console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
 
-// function confirmLength (){
-
-// };
-
-// tested both scenarios with index and with string
-// function randomLower (){
-  // var alphaLower = "abcdefghijklmnopqrstuvwxyz";
-  // return alphaLower[Math.floor(Math.random() * alphaLower.length)];
-  // return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-  
-// };
 
 
-// function randomUppers (){
-  // var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // return alphaUpper[Math.floor(Math.random() * alphaUpper.length)];
-  // return String.fromCharCode(Math.floor(Math.Random() * 26) + 65);
-
-// };
-
-// function randomNumbers (){
-  // var numeric = "1234567890";
-  // return numeric[Math.floor(Math.random() * numeric.lenth)];
-  // return String.fromCharCode(Math.floor(Math.Random() * 10) + 48);
-
-// };
-
-// function randomSymbol(){
-  // var symbol = "!@#$%^&*()";
-  // return symbol[Math.floor(Math.random() * symbol.length)];
-
-// };
