@@ -1,6 +1,7 @@
 // Assignment Code
 //possilbe variables for password selection
-var alpha = "abcdefghijklmnopqrstuvwxyz";
+var alphaLower = "abcdefghijklmnopqrstuvwxyz";
+var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "1234567890";
 var symbols = "!@#$%^&*()";
 var confirmLength = userInput;
@@ -8,7 +9,7 @@ var confirmLength = userInput;
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function generatePassword () {
+function generatePassword () {                                                                                                                    
   console.log("generating password");
   
 
@@ -36,25 +37,37 @@ var userNumber = confirm ("Would you like numbers?");
 var userSymbols = confirm ("Would you like spedial characters? (ex. !@#$)");
 
 console.log(userInput,userLower,userUpper,userNumber,userSymbols)
-//   alert("you would like " + charLength + " characters.");
+console.log(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
 
 // function confirmLength (){
 
 // };
 
 
-// confirmLength(userInput)
-
-
-// function confirmLowers (){
-
-// };
-// function confirmUppers (){
+// function randomLowers (){
+  // var alphaLower = "abcdefghijklmnopqrstuvwxyz";
+  // return alphaLower[Math.floor(Math.random() * alphaLower.length)];
+  // return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 
 // };
-// function confirm Numbers (){
 
-// }
-// function confirmSymbols(){
+// function randomUppers (){
+  // var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  // return alphaUpper[Math.floor(Math.random() * alphaUpper.length)];
+  // return String.fromCharCode(Math.floor(Math.Random() * 26) + 65);
+
+// };
+
+// function randomNumbers (){
+  // var numeric = "1234567890";
+  // return numeric[Math.floor(Math.random() * numeric.lenth)];
+  // return String.fromCharCode(Math.floor(Math.Random() * 10) + 48);
+
+// };
+
+// function randomSymbols(){
+  // var symbols = "!@#$%^&*()";
+  // return symbols[Math.floor(Math.random() * symbols.length)];
+
 
 // };
