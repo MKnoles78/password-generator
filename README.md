@@ -69,8 +69,6 @@ This is a basic webpage.  You can click on the links which will take you to comp
 
 This is a solo project
 
-
-
 ## License
 
 MIT License
