@@ -1,8 +1,26 @@
-# 03 JavaScript: Password Generator
+# Password Generator Assignment
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+## Description 
+
+For this assignment we are provided a develop folder containing a `index.html` file with starter code, a `script.js` file containing starter code, and a `style.css` file with start code.  There was also an asset folder provider providing a `png` showing what the final project should look like.
+
+The goal is to create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
 If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+
+
+
+## Table of Contents (Optional)
+
+If your README is very long, add a table of contents to make it easy for users to find what they need.
+
+* [User Story](#userstory)
+* [Acceptance Criteria](#acceptancecriteria)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
 
 ## User Story
 
@@ -36,24 +54,48 @@ The following image demonstrates the application functionality:
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## Review
+## Installation
 
-You are required to submit the following for review:
+In order to install this assignment, you'll need to clone a repositorty.  Once you open the in VSCode you can then open the `index.html` file in the browser by right clicking an opening in the default browser. The `script.js` and the `style.css` file are connected to the html file via a direct path link. 
 
-* The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Usage 
 
-- - -
+This is a basic webpage.  You can click on the links which will take you to components within the webpage.  No other functionality currently available on the site.
+
+![Refactor Assignment](assets/images/refactor.gif)
+
+## Credits
+
+This is a solo project
+
+
+
+## License
+
+MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+---
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-- - - - - - - - - 
-Personal commit log
-# password-generator
-// created develop branch
-// copy over files from GT repo, index.html, script.js, style.cs
-// added prompts and confirms, tested with alerts
-// added if/else statements with alerts to check confirms
-// console.log for confirms to see in console
-// added additional gherkins to create a more precise result
-// worked on trying to have it where confirms return values
