@@ -9,13 +9,18 @@ var symbol = ["!@#$%^&*()"];
 // within the writePassword function, var password triggers the generatePassword function, and the va passwordText, writes the information to the id #password found on the index.html
 // a function for generatePassword needs to be created so that it can be called within the writePassword function
 // click the button a prompt displays asking How many characters would you like your password to contain
-// then an alert to confirm special characters, numeric characters, lowercase character, and uppercase characters
+// then a confirm window to confirm special characters, numeric characters, lowercase character, and uppercase characters
 
 
 function generatePassword () {
   console.log ("you clicked me")
   // added a console log to confirm the button was being clicked 
   // within the generate password function there needs to be a function that combines all the criteria for the password 
+  prompt("How many characters would you like for your password to contain?")
+  confirm("Would you like special characters?")
+  confirm("Would you like numeric characters?")
+  confirm("Would you like lowercase characters?")
+  confirm("Would you like uppercase characters?")
 
 }
 
