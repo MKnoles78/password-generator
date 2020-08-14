@@ -8,6 +8,9 @@ var symbol = ["!@#$%^&*()"];
 // the code provided provides a event listener for for generate button, which triggers the writePassword function.
 // within the writePassword function, var password triggers the generatePassword function, and the va passwordText, writes the information to the id #password found on the index.html
 // a function for generatePassword needs to be created so that it can be called within the writePassword function
+// click the button a prompt displays asking How many characters would you like your password to contain
+// then an alert to confirm special characters, numeric characters, lowercase character, and uppercase characters
+
 
 function generatePassword () {
   console.log ("you clicked me")
