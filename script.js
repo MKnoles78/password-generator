@@ -17,12 +17,18 @@ function generatePassword () {
   console.log ("you clicked me")
   // added a console log to confirm the button was being clicked 
   // within the generate password function there needs to be a function that combines all the criteria for the password 
-  var passwordLength = prompt("How many characters would you like for your password to contain?")
+  var passwordLength = parseInt (
+    prompt("How many characters would you like for your password to contain?")
+    );
   console.log (passwordLength)
-  confirm("Would you like special characters?")
-  confirm("Would you like numeric characters?")
-  confirm("Would you like lowercase characters?")
-  confirm("Would you like uppercase characters?")
+
+  //assign values to var for confirm selections
+  var hasSpecial = confirm("Would you like special characters?")
+  var hasNumeric = confirm("Would you like numeric characters?")
+  var hasLowercase = confirm("Would you like lowercase characters?")
+  var hasUppercase = confirm("Would you like uppercase characters?")
+
+  console.log (hasSpecial, hasNumeric, hasLowercase, hasUppercase)
 
 }
 
