@@ -23,12 +23,21 @@ function generatePassword () {
   console.log (passwordLength)
 
   //assign values to var for confirm selections
-  var hasSpecial = confirm("Would you like special characters?")
-  var hasNumeric = confirm("Would you like numeric characters?")
-  var hasLowercase = confirm("Would you like lowercase characters?")
-  var hasUppercase = confirm("Would you like uppercase characters?")
+  var hasSpecial = confirm("Would you like special characters?");
+  var hasNumeric = confirm("Would you like numeric characters?");
+  var hasLowercase = confirm("Would you like lowercase characters?");
+  var hasUppercase = confirm("Would you like uppercase characters?");
 
   console.log (hasSpecial, hasNumeric, hasLowercase, hasUppercase)
+
+  // stores values for prompt and confirm selections
+  var passwordOptions = {
+    passwordLength: passwordLength,
+    hasSpecial: hasSpecial,
+    hasNumeric: hasNumeric,
+    hasLowercase: hasLowercase,
+    hasUppercase: hasUppercase
+  }
 
 }
 
