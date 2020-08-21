@@ -37,7 +37,10 @@ function generatePassword () {
     hasNumeric: hasNumeric,
     hasLowercase: hasLowercase,
     hasUppercase: hasUppercase
-  }
+  };
+
+  return passwordOptions
+  
 
 }
 
