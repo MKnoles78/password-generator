@@ -44,6 +44,33 @@ function generatePassword () {
 
 }
 
+//Function for getting a random element from an array
+function getRandom(arr) {
+  var options = getPasswordOptions();
+  var results = [];
+
+  var possibleCharacters = [];
+
+  var guaranteedCharacters = [];
+
+  if (options.hasSpecial) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
+    guaranteedCharacters.push(getRandom(specialCharacters));
+  }
+  if (options.hasNumeric) {
+    possibleCharacters = possibleCharacters.concat(numericCharacters);
+    guaranteedCharacters.push(getRandom(numericCharacters));
+  }
+  if (options.hasLowercase) {
+    possibleCharacters = possibleCharacters.concat(alphaLower);
+    guaranteedCharacters.push(getRandom(alphaLower));
+  }
+  if (options.hasUppercase) {
+    possibleCharacters = possibleCharacters.concat(alphaUpper);
+    guaranteedCharacters.push(getRandom(alphaUpper));
+  }
+}
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
