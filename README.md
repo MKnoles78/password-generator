@@ -57,3 +57,5 @@ Personal commit log
 // console.log for confirms to see in console
 // added additional gherkins to create a more precise result
 // worked on trying to have it where confirms return values
+
+// added screenshots to folder
