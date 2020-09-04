@@ -24,19 +24,19 @@ function getPasswordOptions () {
 
 
 //Conditional statement to check to see if password length is a number. Prompts end if this evaluates false
-  if (isNaN(length) === true) {
+  if (isNaN(passwordLength) === true) {
     alert('Password length must be provided as a number.');
     return;
   }
   
   //Condtional statement to check if password is at least 8 characters long.  Prompts end if this evaluates false
-  if (length < 8) {
+  if (passwordLength < 8) {
     alert('Password length must be at least 8 characters.');
     return;
   }
 
   //Conditional statement to check if password is a less than 128 characters long.  Prompts end if this evaluates false.
-  if (length > 128) {
+  if (passwordLength > 128) {
     alert('Password length must be less than 128 characters.');
     return;
   }
