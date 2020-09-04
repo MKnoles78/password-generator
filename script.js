@@ -78,7 +78,6 @@ function getPasswordOptions () {
 
 //Function for getting a random element from an array
 function getRandom(arr) {
-
   var randIndex = Math.floor(Math.random() * arr.length);
   var randomElement = arr[randIndex];
 
@@ -87,7 +86,7 @@ function getRandom(arr) {
 
 function generatePassword() {
   var options = getPasswordOptions();
-  var results = [];
+  var result = [];
 
   var possibleCharacters = [];
 
@@ -109,6 +108,20 @@ function generatePassword() {
     possibleCharacters = possibleCharacters.concat(alphaUpper);
     guaranteedCharacters.push(getRandom(alphaUpper));
   }
+
+  //For loop to iterate over the password length from the options object, selecting random indicies from the array of possible characters and concatenation
+  for (var i = 0; i < options.length; i++) {
+    var possibleCharacters = getRandom(possibleCharacters);
+    
+    result.push(possibleCharacters);
+  }
+
+  //Mix in at least one of each guaranteed character in the result
+  for (var i = 0; i < guaranteedCharacters.length; i++) {
+    result[i] = guaranteedCharacters[i];
+
+  }
+  return result.join('');
 }
 
 // Assignment Code
