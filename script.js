@@ -2,8 +2,8 @@
 //establish the variables in an array to be used in the password
 var specialCharacters = ['!','@','#','$','^','&','*']
 var numericCharacters = ['1','2','3','4','5','6','7','8','9','0']
-var alphaLower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','s','t','u','v','w','x','y','z'];
-var alphaUpper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z'];
+var lowerCasedCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','s','t','u','v','w','x','y','z'];
+var upperCasedCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','T','U','V','W','X','Y','Z'];
 
 
 // the code provided provides a event listener for for generate button, which triggers the writePassword function.
@@ -17,26 +17,26 @@ function getPasswordOptions () {
   console.log ("you clicked me")
   // added a console log to confirm the button was being clicked 
   // within the generate password function there needs to be a function that combines all the criteria for the password 
-  var passwordLength = parseInt (
+  var length = parseInt (
     prompt("How many characters would you like for your password to contain?")
     );
-  console.log (passwordLength)
+  console.log (length)
 
 
 //Conditional statement to check to see if password length is a number. Prompts end if this evaluates false
-  if (isNaN(passwordLength) === true) {
+  if (isNaN(length) === true) {
     alert('Password length must be provided as a number.');
     return;
   }
   
   //Condtional statement to check if password is at least 8 characters long.  Prompts end if this evaluates false
-  if (passwordLength < 8) {
+  if (length < 8) {
     alert('Password length must be at least 8 characters.');
     return;
   }
 
   //Conditional statement to check if password is a less than 128 characters long.  Prompts end if this evaluates false.
-  if (passwordLength > 128) {
+  if (length > 128) {
     alert('Password length must be less than 128 characters.');
     return;
   }
@@ -44,19 +44,30 @@ function getPasswordOptions () {
 
 
   //assign values to var for confirm selections
-  var hasSpecial = confirm("Would you like special characters? Click 'OK' to confirm");
-  var hasNumeric = confirm("Would you like numeric characters? Click 'OK' to confirm");
-  var hasLowercase = confirm("Would you like lowercase characters? Click 'OK' to confirm");
-  var hasUppercase = confirm("Would you like uppercase characters? Click 'OK' to confirm");
+  var hasSpecialCharacters = confirm(
+    "Would you like special characters? Click 'OK' to confirm"
+    );
 
-  console.log (hasSpecial, hasNumeric, hasLowercase, hasUppercase)
+  var hasNumericCharacters = confirm(
+    "Would you like numeric characters? Click 'OK' to confirm"
+    );
+
+  var hasLowerCasedCharacters = confirm(
+    "Would you like lowercase characters? Click 'OK' to confirm"
+    );
+
+  var hasUpperCasedCharacters = confirm(
+    "Would you like uppercase characters? Click 'OK' to confirm"
+    );
+
+  console.log (hasSpecialCharacters, hasNumericCharacters, hasLowerCasedCharacters, hasUpperCasedCharacters)
 
   //Conditional statement to check if user does not include any types of characters. Password generator ends if all four variables evaluate to false.
   if (
-    hasSpecial === false &&
-    hasNumeric === false &&
-    hasLowercase === false &&
-    hasUppercase === false 
+    hasSpecialCharacters === false &&
+    hasNumericCharacters === false &&
+    hasLowerCasedCharacters === false &&
+    hasUpperCasedCharacters === false 
   ) {
     alert('Must select at least one character type.');
     return;
@@ -64,11 +75,11 @@ function getPasswordOptions () {
 
   // stores values for prompt and confirm selections
   var passwordOptions = {
-    passwordLength: passwordLength,
-    hasSpecial: hasSpecial,
-    hasNumeric: hasNumeric,
-    hasLowercase: hasLowercase,
-    hasUppercase: hasUppercase
+    length: length,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasNumericCharacters: hasNumericCharacters,
+    hasLowerCasedCharacters: hasLowerCasedCharacters,
+    hasUpperCasedCharacters: hasUpperCasedCharacters
   };
 
   return passwordOptions
@@ -92,32 +103,32 @@ function generatePassword() {
 
   var guaranteedCharacters = [];
 
-  if (options.hasSpecial) {
+  if (options.hasSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
-  if (options.hasNumeric) {
+  if (options.hasNumericCharacters) {
     possibleCharacters = possibleCharacters.concat(numericCharacters);
     guaranteedCharacters.push(getRandom(numericCharacters));
   }
-  if (options.hasLowercase) {
-    possibleCharacters = possibleCharacters.concat(alphaLower);
-    guaranteedCharacters.push(getRandom(alphaLower));
+  if (options.hasLowerCasedCharacters) {
+    possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
+    guaranteedCharacters.push(getRandom(lowerCasedCharacters));
   }
-  if (options.hasUppercase) {
-    possibleCharacters = possibleCharacters.concat(alphaUpper);
-    guaranteedCharacters.push(getRandom(alphaUpper));
+  if (options.hasUpperCasedCharacters) {
+    possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
+    guaranteedCharacters.push(getRandom(upperCasedCharacters));
   }
 
   //For loop to iterate over the password length from the options object, selecting random indicies from the array of possible characters and concatenation
-  for (var i = 0; i < options.passwordLength; i++) {
+  for (var i = 0; i < options.length; i++) {
     var possibleCharacters = getRandom(possibleCharacters);
     
     result.push(possibleCharacters);
   }
 
   //Mix in at least one of each guaranteed character in the result
-  for (var i = 0; i < guaranteedCharacters.passwordLength; i++) {
+  for (var i = 0; i < guaranteedCharacters.length; i++) {
     result[i] = guaranteedCharacters[i];
 
   }
